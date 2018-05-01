@@ -1,13 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chrome <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hello World!</title>
+</head>
+
+<body>
+  <link rel="stylesheet" href="/bower_components/editor.md/css/editormd.min.css" />
+  <div id="editormd">
+    <textarea style="display:none;">### Hello Editor.md !</textarea>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script src="editormd.min.js"></script>
+  <script type="text/javascript">
+    $(function () {
+      var editor = editormd("editormd", {
+        path: "../lib/" // Autoload modules mode, codemirror, marked... dependents libs path
+      });
+
+      /*
+      // or
+      var editor = editormd({
+          id   : "editormd",
+          path : "../lib/"
+      });
+      */
+    });
+  </script>
+</body>
+
 </html>
