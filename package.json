@@ -4,7 +4,7 @@
   "main": "main.js",
   "license": "MIT",
   "devDependencies": {
-    "electron": "1.8.2"
+    "electron": "^4.1.4"
   },
   "dependencies": {
     "@material-ui/core": "^1.5.1",
