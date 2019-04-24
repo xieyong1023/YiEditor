@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron')
+const { app, BrowserWindow } = require('electron')
 const path = require('path')
 const url = require('url')
 
@@ -6,9 +6,9 @@ const url = require('url')
 // 当 JavaScript 对象被垃圾回收， window 会被自动地关闭
 let win
 
-function createWindow () {
+function createWindow() {
   // 创建浏览器窗口。
-  win = new BrowserWindow({width: 800, height: 600})
+  win = new BrowserWindow({ width: 800, height: 600 })
 
   // 然后加载应用的 index.html。
   win.loadURL(url.format({
